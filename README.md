@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # timx_portfolio
+=======
+# vuejs
+>>>>>>> a5606194a256687d3b950281d1fd4ca637ee38ee
 
 ## Project setup
 ```
