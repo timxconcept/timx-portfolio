@@ -8,25 +8,30 @@ $font-family: 'Playfair Display', serif;
 
 @mixin heading-2 {
     font-size: 81.5;
-    font-weight: ;
+    font-weight: bold ;
 }
 
 @mixin heading-3 {
     font-size: 54;
-    font-weight: ;
+    font-weight: bold;
 }
 
 @mixin heading-4 {
     font-size: 36;
-    font-weight: ;
+    font-weight: bold;
 }
 
 @mixin heading-5 {
     font-size: 20;
-    font-weight: ;
+    font-weight: 400;
 }
 
 @mixin heading-6 {
     font-size: 16;
-    font-weight: ;
+    font-weight: 100;
+}
+
+@mixin large-text-bold {
+    font-size: 14;
+    font-weight: bold;
 }
