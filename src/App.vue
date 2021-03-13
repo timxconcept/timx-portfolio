@@ -1,15 +1,16 @@
 <template>
   <div id="app">
-    <welcome-bg />
+    <main-screen />
   </div>
 </template>
 
 <script>
-import WelcomeBg from "@/components/WelcomeBg";
+import MainScreen from "@/components/MainScreen";
 
 export default {
+  name: "App",
   components: {
-    WelcomeBg,
+    MainScreen,
   },
 };
 </script>
@@ -20,6 +21,11 @@ export default {
 
 body {
   background-color: $white;
+  padding: 0;
+  margin: 0;
+}
+* {
+  box-sizing: border-box;
 }
 
 h1 {
@@ -37,5 +43,6 @@ p {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: $white;
+  max-height: 100vh;
 }
-</style>
+</style> 
