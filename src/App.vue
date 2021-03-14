@@ -26,7 +26,7 @@ export default {
 @import "./global-style/typography.scss";
 
 body {
-  background-color: $white;
+  background-color: $black;
   padding: 0;
   margin: 0;
 }
@@ -49,6 +49,6 @@ p {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: $white;
-  max-height: 100vh;
+  overflow: hidden;
 }
 </style> 

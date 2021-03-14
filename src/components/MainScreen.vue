@@ -64,7 +64,6 @@ export default {
   grid-template-columns: 25vw 50vw 25vw;
   grid-template-rows: 25vh 50vh 25vh;
   grid-gap: 0px;
-  background-color: $black;
   font-size: 0.6em;
 }
 
