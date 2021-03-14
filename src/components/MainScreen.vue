@@ -12,11 +12,19 @@
       <div>
         <img class="timx_image" src="../assets/images/timx_2.png" alt="" />
       </div>
-      <div>6</div>
+      <div>
+        <p>empty</p>
+      </div>
       <div>
         <h4 class="LeftFade">Frontend<br />Designer</h4>
       </div>
       <div>
+        <p>
+          I am an independent hands-on UX/UI-designer helping clients to
+          structure and visually brand their (digital) content. While focussing
+          on the users’ needs, I craft meaningful aesthetic graphic solutions. I
+          aim for innovation, inclusivity and simplicity.
+        </p>
         <a
           href="https://www.behance.net/timothyexodus"
           class="social_icons"
@@ -71,6 +79,13 @@ h4 {
   font-size: clamp(0.9em, 2vw, 2em);
 }
 
+p {
+  text-align: center;
+  font-size: clamp(0.6em, 0.9vw, 1em);
+  width: clamp(31em, 34vw, 45em);
+  margin-bottom: 25px;
+}
+
 .logo {
   width: clamp(10em, 15vw, 20em);
 }
@@ -84,6 +99,10 @@ h4 {
   display: inline;
   margin: 10px;
   color: white;
+}
+
+svg {
+  width: clamp(1.5em, 2vw, 4em) !important;
 }
 
 .social_icons:hover {
