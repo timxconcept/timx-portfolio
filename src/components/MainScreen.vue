@@ -2,11 +2,11 @@
   <div>
     <div class="grid-container">
       <div>
-        <h4>Brand Design<br />Consultant</h4>
+        <h4 class="LeftFade">Brand <br />Designer</h4>
       </div>
-      <div><img src="../assets/images/TimxLogo.png" alt="" /></div>
+      <div><img src="../assets/images/TimxLogo.png" alt="" class="logo" /></div>
       <div>
-        <h4>Motion<br />Designer</h4>
+        <h4 class="RightFade">Motion<br />Designer</h4>
       </div>
       <div>4</div>
       <div>
@@ -14,21 +14,29 @@
       </div>
       <div>6</div>
       <div>
-        <h4>Frontend<br />Designer</h4>
+        <h4 class="LeftFade">Frontend<br />Designer</h4>
       </div>
       <div>
-        <div class="social_icons">
+        <a
+          href="https://www.behance.net/timothyexodus"
+          class="social_icons"
+          target="_blank"
+        >
           <icon name="behance" size="30px" />
-        </div>
-        <div class="social_icons">
+        </a>
+        <a
+          href="https://www.instagram.com/timxdesign/"
+          class="social_icons"
+          target="_blank"
+        >
           <icon name="instagram" size="30px" />
-        </div>
-        <div class="social_icons">
+        </a>
+        <a href="github.com/timxconcept/" class="social_icons" target="_blank">
           <icon name="github" size="30px" />
-        </div>
+        </a>
       </div>
       <div>
-        <h4>UI/UX<br />Designer</h4>
+        <h4 class="RightFade">UI/UX<br />Designer</h4>
       </div>
     </div>
   </div>
@@ -49,6 +57,7 @@ export default {
   grid-template-rows: 25vh 50vh 25vh;
   grid-gap: 0px;
   background-color: $black;
+  font-size: 0.6em;
 }
 
 div {
@@ -59,15 +68,64 @@ div {
 h4 {
   text-align: left;
   margin: 0 20px;
+  font-size: clamp(0.9em, 2vw, 2em);
+}
+
+.logo {
+  width: clamp(10em, 15vw, 20em);
 }
 
 .timx_image {
-  width: 25vw;
+  width: 32vw;
+  width: clamp(3em, 55vw, 43em);
+  animation: fadein 1s;
 }
-
 .social_icons {
   display: inline;
   margin: 10px;
   color: white;
+}
+
+.social_icons:hover {
+  color: gray;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.LeftFade {
+  animation: fadeleft 1s;
+}
+
+.RightFade {
+  animation: faderight 1s;
+}
+
+@keyframes fadeleft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes faderight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 </style>
