@@ -1,34 +1,46 @@
 <template>
-  <div id="app">
-    <main-screen />
+  <div class="app" :class="mode == 'dark' ? 'dark' : 'light'">
+    <main-screen :mode="mode" @toggle="toggle" />
   </div>
 </template>
 
 <script>
-import MainScreen from "@/components/MainScreen";
+import MainScreen from "./components/MainScreen.vue";
 
 export default {
   name: "App",
+  data() {
+    return {
+      mode: "light",
+    };
+  },
   components: {
     MainScreen,
   },
-  metaInfo: {
-    // if no subcomponents specify a metaInfo.title, this title will be used
-    title: "Default Title",
-    // all titles will be injected into this template
-    titleTemplate: "%s | My Awesome Webapp",
+
+  methods: {
+    toggle() {
+      if (this.mode == "dark") {
+        this.mode = "light";
+      } else {
+        this.mode = "dark";
+      }
+    },
   },
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import "./global-style/colors.scss";
 @import "./global-style/typography.scss";
 
 body {
-  background-color: $black;
   padding: 0;
   margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  overflow: hidden;
 }
 * {
   box-sizing: border-box;
@@ -42,13 +54,14 @@ p {
   @include large-text-bold;
 }
 
-#app {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
+.add {
+  background-color: $white;
+  color: $black;
+  transition: background-color 0.3s;
+}
+
+.dark {
+  background-color: $black;
   color: $white;
-  overflow: hidden;
 }
 </style> 

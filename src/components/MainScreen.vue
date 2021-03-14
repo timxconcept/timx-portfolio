@@ -8,7 +8,9 @@
       <div>
         <h4 class="RightFade">Motion<br />Designer</h4>
       </div>
-      <div>4</div>
+      <div>
+        <Toggle :mode="mode" @toggle="$emit('toggle')" />
+      </div>
       <div>
         <img class="timx_image" src="../assets/images/timx_2.png" alt="" />
       </div>
@@ -18,7 +20,7 @@
       <div>
         <h4 class="LeftFade">Frontend<br />Designer</h4>
       </div>
-      <div>
+      <div class="middle_bottom">
         <p>
           I am an independent hands-on UX/UI-designer helping clients to
           structure and visually brand their (digital) content. While focussing
@@ -51,7 +53,10 @@
 </template>
 
 <script>
+import Toggle from "./Toggle.vue";
 export default {
+  props: ["mode"],
+  components: { Toggle },
   name: "MainScreen",
 };
 </script>
@@ -90,14 +95,18 @@ p {
 }
 
 .timx_image {
-  width: 32vw;
-  width: clamp(3em, 55vw, 43em);
+  width: clamp(25em, 45vw, 35em);
   animation: fadein 1s;
+}
+
+.middle_bottom {
+  text-align: center;
 }
 .social_icons {
   display: inline;
   margin: 10px;
   color: white;
+  text-align: center;
 }
 
 svg {
