@@ -41,6 +41,7 @@ body {
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   overflow: hidden;
+  max-height: 100vh;
 }
 * {
   box-sizing: border-box;
@@ -59,6 +60,7 @@ p {
   color: $black;
   transition: background 0.6s;
   overflow: hidden;
+  max-height: 100vh;
 }
 
 .dark {
