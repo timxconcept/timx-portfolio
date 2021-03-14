@@ -68,6 +68,7 @@ export default {
   grid-template-rows: 25vh 50vh 25vh;
   grid-gap: 0px;
   font-size: 0.6em;
+  overflow: hidden;
 }
 
 div {

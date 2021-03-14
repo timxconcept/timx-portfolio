@@ -57,11 +57,12 @@ p {
 .add {
   background-color: $white;
   color: $black;
-  transition: background-color 0.3s;
+  transition: background 0.6s;
+  overflow: hidden;
 }
 
 .dark {
-  background-color: $black;
+  background: $black;
   color: $white;
 }
 </style> 
