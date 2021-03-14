@@ -69,6 +69,7 @@ export default {
   grid-gap: 0px;
   font-size: 0.6em;
   overflow: hidden;
+  max-height: 100vh;
 }
 
 div {
