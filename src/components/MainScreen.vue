@@ -14,9 +14,7 @@
       <div>
         <img class="timx_image" src="../assets/images/timx_2.png" alt="" />
       </div>
-      <div>
-        <p>empty</p>
-      </div>
+      <div></div>
       <div>
         <h4 class="LeftFade">Frontend<br />Designer</h4>
       </div>
